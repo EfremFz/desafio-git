@@ -1,5 +1,9 @@
-==============ATALHOS DE USO========================
-Para limpar o terminal basta clicar o atalho Ctrl + L
+:man_student:
+
+
+
+### ATALHOS DE USO
+ Para limpar o terminal basta clicar o atalho Ctrl + L
 
 Ao começar a digitar um comando e der TAB, ele vai completar 
 
@@ -11,7 +15,10 @@ terminal.
 
 
 
-===================CRIAR CHAVE SSH ==================
+### CRIAR CHAVE SSH 
+
+
+
 Para criar a chave de encriptação ssh para o github:
 
 ssh-keygen -t ed25519 -C email_usado_no_github@email
@@ -30,7 +37,7 @@ Lembrete ( para criar a chave no github é usada a chave com a extensão .pub)
 
 
 
-=======PARA INICIALIZAR O AGENTE QUE VAI GERENCIAR AS CHAVES CRIADAS=======
+### PARA INICIALIZAR O AGENTE QUE VAI GERENCIAR AS CHAVES CRIADAS
 
 Esse processo deve ser feito para que as chaves funcione
 
@@ -52,7 +59,7 @@ Neste passo é digitado a mesma senha que uso na criação das chaves.
 
 
 
-==============NAVEGAR NAS PASTAS =================
+### NAVEGAR NAS PASTAS 
 
 Para navegar nas pastas é usado o comando cd ex:
 cd /C/Users/efrem/workspace 
@@ -75,7 +82,7 @@ mv NOME_DO_ARQUIVO.extenscao ./NOME_da_PASTA_QUE_DESTINO
 
 
 
-===================VISUALIZAR O CONTEÚDO DA PASTA================
+### VISUALIZAR O CONTEÚDO DA PASTA
 
 Para visualizar o conteúdo da pasta digital:
 
@@ -95,7 +102,7 @@ mkdir NOME_DA_PASTA
 
 
 
-===============CLONAGEM DE REPOSITÓRIO========================
+### CLONAGEM DE REPOSITÓRIO
 Processo usando o ssh:
 
 Vá no Github e copie o código ssh em code do repositório
@@ -108,7 +115,12 @@ Se der certo, ele vai perguntar: continue connecting (yes/no/[fingerprint])? Dig
 
 Para saber se deu certo use o ls
 
-============CRIANDO REPOSITÓRIO===================
+
+
+### CRIANDO REPOSITÓRIO
+
+
+
 Para inicializar o git na pasta:
 
 git init
@@ -120,11 +132,13 @@ mkdir NOME_DA_PASTA
 
 
 
-==========CONFIGURAÇÃO INICIAL DO GIT================
+### CONFIGURAÇÃO INICIAL DO GIT
+
+
 
 Para setar a configuração do GIT de forma global no seu repositório:
 
-git config – global user.email “[EMAIL_QUE_USA_NO_GIT@EMAIL.COM](mailto:EMAILQUEUSANOGIT@EMAIL.COM)”
+git config – global user.email “EMAIL_QUE_USA_NO_GIT@EMAIL.COM”
 
 git config –global user.name NICK_USADO_NO_GIT
 
@@ -132,7 +146,8 @@ Observação: esses comandos não retornam mensagem de sucesso.
 
 
 
-============FAZENDO O COMMIT DOS ARQUIVOS================
+### FAZENDO O COMMIT DOS ARQUIVOS
+
 
 
 Para fazer o commit dos arquivos, usar a sequência de comandos:
@@ -157,7 +172,7 @@ git status
 
 
 
-========VER CONFIGURAÇÕES DO GIT=========
+### VER CONFIGURAÇÕES DO GIT
 
 Para ver as configurações do git:
 git config –list
@@ -168,7 +183,10 @@ git config –list
 
 
 
-========EMPURRAR O CÓDIGO PARA O GITHUB==============
+### EMPURRAR O CÓDIGO PARA O GITHUB
+
+
+
 Como apontar o repositório da área de desenvolvimento local para o remoto:
 git remote add origin LINK_DO_REPOSITÓRIO_GITHUB
 
@@ -183,13 +201,17 @@ git push origin master
 
 
 
-======PUXAR O CÓDIGO DO GITHUB==============
+### PUXAR O CÓDIGO DO GITHUB
+
+
+
 Quando quiser puxar a última versão empurrada para o github:
 git pull origin master
 
 
 
-=============CLONAR O REPOSITÓRIO DO GITHUB==============
+### CLONAR O REPOSITÓRIO DO GITHUB
+
 Para adicionar o repositório via terminal, primeiro vá no gitthub e copie o web url contido em Code.
 
 Para clonar o repositório :
