@@ -110,7 +110,7 @@ Para visualizar o conteúdo da pasta digital:
 
 Para visualizar conteúdos ocultos da pasta digitar :
 
-´ls -a`
+`ls -a`
 
 Para ver o caminho completo da pasta que está no momento:
 
@@ -147,26 +147,50 @@ ex: ("commit inicial")("Alteração da tela de login")”
 `git status`
 
 ---
+### EMPURRAR O CÓDIGO PARA O GITHUB
 
+
+
+Como apontar o repositório da área de desenvolvimento local para o remoto:
+
+`git remote add origin LINK_DO_REPOSITÓRIO_GITHUB`
+
+> Observação: origin pode ser substituído por qualquer nome, mas por convenção é usado o origin
+
+Para ver a lista de repositórios cadastrados:
+
+`git remote -v`
+
+Para empurrar o repositório para o GitHub
+
+`git push origin master`
+
+>Nota: Hoje em dia, a maioria das ferramentas de Git usa main como o nome padrão para a branch principal, substituindo o antigo termo master
+
+---
 
 
 ### CRIAR CHAVE SSH 
 
-> O trecho abaixo não está atualizado (DESCONSIDERE)
+> Esses passo devem ser feitos no GitBash
 
 Para criar a chave de encriptação ssh para o github:
 
-ssh-keygen -t ed25519 -C email_usado_no_github@email
+`ssh-keygen -t ed25519 -C "email_usado_no_github@email"`
 
-Se der certo ele vai apontar onde ela vai ser salva, aperte Enter e insira uma senha.
+Se der certo ele vai apontar onde ela vai ser salva, aperte Enter para savar no local padrão e em seguida vai pedir para cadastar uma senha.
 
 Para visualizar a chave é necessário entrar na pasta (.ssh) ex:
 
 cd /C/Users/efrem/.ssh
 
+> Neste passo você pode ir manualmente pelas pastas no explorador de arquivos do Windowns e iniciar o GitBach diretamente de lá 
+
 Usar o ls para listar os arquivos e depois usar o comando CAT para ver a chave ex:
 
-cat id_ed25519.pub
+`cat id_ed25519.pub`
+
+> Este comando exibe a sua chave publica que é usada para criar a chave SSH na sua conta do GitHub e deve ser feito dentro da pasta .sshl
 
 Lembrete ( para criar a chave no github é usada a chave com a extensão .pub)
 
@@ -178,48 +202,14 @@ Esse processo deve ser feito para que as chaves funcione
 
 Primeiro inicialize o agente :
 
-eval $(ssh-agent -s)  "se o agente for inicializado, a mensagem: Agent pid SEQUÊNCIA DE 
-
-NÚMEROS será exibida"
+`eval $(ssh-agent -s)`
+>  "Se o agente for inicializado, a mensagem: **Agent pid SEQUÊNCIA DE NÚMEROS** será exibida"
 
 Segundo, entregue a chave para ele:
 
-ssh-add id_ed25519  "Deve ser entregue a chave privada, a que não tem a extensão .pub" " Esse 
+`ssh-add id_ed25519`  
+>"Deve ser entregue a chave privada, a que não tem a extensão .pub" 
 
-comando só pode ser executado assim se estiver dentro da pasta ".ssh"
+> " Esse comando só pode ser executado assim se estiver dentro da pasta ".ssh"
 
 Neste passo é digitado a mesma senha que uso na criação das chaves.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### EMPURRAR O CÓDIGO PARA O GITHUB
-
-
-
-Como apontar o repositório da área de desenvolvimento local para o remoto:
-git remote add origin LINK_DO_REPOSITÓRIO_GITHUB
-
-obs: origin pode ser substituído por qualquer nome, mas por convenção é usado o origin
-Para ver a lista de repositórios cadastrados:
-git remote -v
-
-Para empurrar o repositório para o GitHub
-git push origin master
-
-
-
-
-
-
