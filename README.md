@@ -81,9 +81,7 @@ Ao começar a digitar um comando e der **TAB**, ele vai completar
 
 Dentro da sua pasta onde vai iniciar o trabalho, abra o git bash clicando com o botão direito 
 
-dentro da pasta, para eliminar a necessidade de navegar nas pastas pelos comandos no 
-
-terminal.
+dentro da pasta, para eliminar a necessidade de navegar nas pastas pelos comandos no terminal.
 
 ---
 
@@ -127,6 +125,28 @@ Quando quiser puxar a última versão empurrada para o github:
 > Atualmente, a o GitHub adota o nome MAIN em vez de master para a branch principal. Caso seu repositório utilize o padrão novo, o comando correto será: 
 
 `git pull origin main`
+
+---
+
+### USANDO AS BRANCH
+
+> Para criar uma nova BRANCH usamos o comando abaixo
+
+`git branch  NOME_QUE_VAI_USAR_NA_BRANCH `
+
+>Nota : Você sabe que o comando deu certo, quando não retornar nenhuma mensagem de erro
+
+Para fazer alterações dentro da branch é necessário entrar nela após fazer a criação.
+
+> Para acessar a branch use o comando abaixo:
+
+`git checkout  NOME_QUE_VAI_USAR_NA_BRANCH `
+
+>Observação: o comando CHECKOUT acima, altera a branch, se quiser ir para a MAIN(em projetos mais antigos a branch principal se chama MASTER) ou outra que criou, basta repetir o comando com o nome da branch que deseja acessar.
+
+Para fazer o merge, você retorna para a sua branch main e faz o comando abaixo
+
+`git merge NOME_QUE_VAI_USAR_NA_BRANCH `
 
 ---
 
