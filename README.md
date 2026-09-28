@@ -148,6 +148,12 @@ Para fazer o merge, você retorna para a sua branch main e faz o comando abaixo
 
 `git merge NOME_QUE_VAI_USAR_NA_BRANCH `
 
+> Para ver todas as Branch que existem no seu projeto,basta fazer o comando abaixo:
+
+`git branch`
+
+> Ao listar todas as branch, ele distaca em qual está no momento.
+
 ---
 
 ### NAVEGAR NAS PASTAS 
