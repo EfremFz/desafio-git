@@ -21,6 +21,52 @@ Para setar a configuração do GIT de forma global no seu repositório:
 
 ---
 
+### CRIAR CHAVE SSH 
+
+> Esses passo devem ser feitos no GitBash
+
+Para criar a chave de encriptação ssh para o github:
+
+`ssh-keygen -t ed25519 -C "email_usado_no_github@email"`
+
+Se der certo ele vai apontar onde ela vai ser salva, aperte Enter para savar no local padrão e em seguida vai pedir para cadastar uma senha.
+
+Para visualizar a chave é necessário entrar na pasta (.ssh) ex:
+
+cd /C/Users/efrem/.ssh
+
+> Neste passo você pode ir manualmente pelas pastas no explorador de arquivos do Windowns e iniciar o GitBach diretamente de lá 
+
+Usar o ls para listar os arquivos e depois usar o comando CAT para ver a chave ex:
+
+`cat id_ed25519.pub`
+
+> Este comando exibe a sua chave publica que é usada para criar a chave SSH na sua conta do GitHub e deve ser feito dentro da pasta .sshl
+
+Lembrete ( para criar a chave no github é usada a chave com a extensão .pub)
+
+
+
+### PARA INICIALIZAR O AGENTE QUE VAI GERENCIAR AS CHAVES CRIADAS
+
+Esse processo deve ser feito para que as chaves funcione
+
+Primeiro inicialize o agente :
+
+`eval $(ssh-agent -s)`
+>  "Se o agente for inicializado, a mensagem: **Agent pid SEQUÊNCIA DE NÚMEROS** será exibida"
+
+Segundo, entregue a chave para ele:
+
+`ssh-add id_ed25519`  
+>"Deve ser entregue a chave privada, a que não tem a extensão .pub" 
+
+> " Esse comando só pode ser executado assim se estiver dentro da pasta ".ssh"
+
+Neste passo é digitado a mesma senha que uso na criação das chaves.
+
+---
+
 ### VER CONFIGURAÇÕES DO GIT
 
 Para ver as configurações do git:
@@ -175,46 +221,3 @@ Para empurrar o repositório para o GitHub
 ---
 
 
-### CRIAR CHAVE SSH 
-
-> Esses passo devem ser feitos no GitBash
-
-Para criar a chave de encriptação ssh para o github:
-
-`ssh-keygen -t ed25519 -C "email_usado_no_github@email"`
-
-Se der certo ele vai apontar onde ela vai ser salva, aperte Enter para savar no local padrão e em seguida vai pedir para cadastar uma senha.
-
-Para visualizar a chave é necessário entrar na pasta (.ssh) ex:
-
-cd /C/Users/efrem/.ssh
-
-> Neste passo você pode ir manualmente pelas pastas no explorador de arquivos do Windowns e iniciar o GitBach diretamente de lá 
-
-Usar o ls para listar os arquivos e depois usar o comando CAT para ver a chave ex:
-
-`cat id_ed25519.pub`
-
-> Este comando exibe a sua chave publica que é usada para criar a chave SSH na sua conta do GitHub e deve ser feito dentro da pasta .sshl
-
-Lembrete ( para criar a chave no github é usada a chave com a extensão .pub)
-
-
-
-### PARA INICIALIZAR O AGENTE QUE VAI GERENCIAR AS CHAVES CRIADAS
-
-Esse processo deve ser feito para que as chaves funcione
-
-Primeiro inicialize o agente :
-
-`eval $(ssh-agent -s)`
->  "Se o agente for inicializado, a mensagem: **Agent pid SEQUÊNCIA DE NÚMEROS** será exibida"
-
-Segundo, entregue a chave para ele:
-
-`ssh-add id_ed25519`  
->"Deve ser entregue a chave privada, a que não tem a extensão .pub" 
-
-> " Esse comando só pode ser executado assim se estiver dentro da pasta ".ssh"
-
-Neste passo é digitado a mesma senha que uso na criação das chaves.
