@@ -1,6 +1,23 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="100">
 
+
+## Índice
+
+- [Configuração inicial do Git](#configuração-inicial-do-git)
+- [Criar chave SSH](#criar-chave-ssh)
+- [Inicializar o agente de chaves](#para-inicializar-o-agente-que-vai-gerenciar-as-chaves-criadas)
+- [Ver configurações do Git](#ver-configurações-do-git)
+- [Atalhos de uso](#atalhos-de-uso)
+- [Clonagem de repositório](#clonagem-de-repositório)
+- [Puxar a versão mais recente](#puxar-a-versão-sincronizada-mais-recente-do-código-salvo-no-github)
+- [Usar branches](#usando-as-branch)
+- [Navegar nas pastas](#navegar-nas-pastas)
+- [Visualizar o conteúdo da pasta](#visualizar-o-conteúdo-da-pasta)
+
+---
+
+
 # Utilizando GIT - GITHUB
 
 
@@ -245,5 +262,7 @@ Para empurrar o repositório para o GitHub
 >Nota: Hoje em dia, a maioria das ferramentas de Git usa main como o nome padrão para a branch principal, substituindo o antigo termo master
 
 ---
+
+<a href="#topo">↑ Voltar ao topo</a>
 
 
